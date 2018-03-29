@@ -10,28 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var listOfWords = [
-        "София",
-        "Злата",
-        "Ева",
-        "Екатерина",
-        "Анастасия",
-        "Алиса",
-        "Анна",
-        "Елизавета",
-        "Полина",
-        "Карина",
-        "Артем",
-        "Иван",
-        "Максим",
-        "Марк",
-        "Дмитрий",
-        "Михаил",
-        "Александр",
-        "Тимофей",
-        "Владислав",
-        "Матвей"
-    ]
+    var listOfWords = names
     
     let incorrectMovesAllowed = 7
     
