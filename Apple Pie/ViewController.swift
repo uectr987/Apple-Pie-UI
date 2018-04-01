@@ -72,21 +72,25 @@ class ViewController: UIViewController {
         }
     }
     
-    func newRound(after delay: Double = 0) {
+    func newRound() {
+        if !listOfWords.isEmpty {
+            let randomIndex = Int(arc4random_uniform(UInt32(listOfWords.count)))
+            let newWord = listOfWords.remove(at: randomIndex)
+            currentGame = Game(
+                word: newWord,
+                incorrectMovesRemaining: incorrectMovesAllowed,
+                guessedLetters: []
+            )
+            enableLetterButtons(true)
+            updateUI()
+        } else {
+            enableLetterButtons(false)
+        }
+    }
+    
+    func newRound(after delay: Double) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            if !self.listOfWords.isEmpty {
-                let randomIndex = Int(arc4random_uniform(UInt32(self.listOfWords.count)))
-                let newWord = self.listOfWords.remove(at: randomIndex)
-                self.currentGame = Game(
-                    word: newWord,
-                    incorrectMovesRemaining: self.incorrectMovesAllowed,
-                    guessedLetters: []
-                )
-                self.enableLetterButtons(true)
-                self.updateUI()
-            } else {
-                self.enableLetterButtons(false)
-            }
+            self.newRound()
         }
     }
     
