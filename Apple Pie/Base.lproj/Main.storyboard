@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -325,39 +325,6 @@
                         <outlet property="correctWordLabel" destination="MsL-u5-CNJ" id="LZD-02-82e"/>
                         <outlet property="scoreLabel" destination="0kY-EI-AC1" id="3GQ-gD-5mJ"/>
                         <outlet property="treeImageView" destination="OG6-NI-gyq" id="bke-NN-jSW"/>
-                        <outletCollection property="letterButtons" destination="liA-BP-s8e" collectionClass="NSMutableArray" id="oVb-J1-BE8"/>
-                        <outletCollection property="letterButtons" destination="k2y-i4-fa2" collectionClass="NSMutableArray" id="CrW-oM-dWw"/>
-                        <outletCollection property="letterButtons" destination="f8Q-sf-cXf" collectionClass="NSMutableArray" id="cbc-My-lP8"/>
-                        <outletCollection property="letterButtons" destination="f3h-lo-aO2" collectionClass="NSMutableArray" id="kOU-hS-FyS"/>
-                        <outletCollection property="letterButtons" destination="Up1-9h-n01" collectionClass="NSMutableArray" id="eFy-fH-RYn"/>
-                        <outletCollection property="letterButtons" destination="KPO-wr-43R" collectionClass="NSMutableArray" id="SEM-4E-oAI"/>
-                        <outletCollection property="letterButtons" destination="UHR-hZ-dxW" collectionClass="NSMutableArray" id="4Bm-ya-ypA"/>
-                        <outletCollection property="letterButtons" destination="inN-bO-PGQ" collectionClass="NSMutableArray" id="kcz-1P-NL6"/>
-                        <outletCollection property="letterButtons" destination="5Ti-bA-0nQ" collectionClass="NSMutableArray" id="P69-I7-v5b"/>
-                        <outletCollection property="letterButtons" destination="MWK-WP-gam" collectionClass="NSMutableArray" id="6i7-pD-Zih"/>
-                        <outletCollection property="letterButtons" destination="Dh2-su-xR3" collectionClass="NSMutableArray" id="LNt-NG-b7O"/>
-                        <outletCollection property="letterButtons" destination="Scm-SM-18t" collectionClass="NSMutableArray" id="67H-GF-cIz"/>
-                        <outletCollection property="letterButtons" destination="2pa-4d-9cR" collectionClass="NSMutableArray" id="SVY-mm-qE9"/>
-                        <outletCollection property="letterButtons" destination="T9d-C4-h2Z" collectionClass="NSMutableArray" id="JnP-yd-sNt"/>
-                        <outletCollection property="letterButtons" destination="pxw-GO-K9y" collectionClass="NSMutableArray" id="uTx-Cf-y86"/>
-                        <outletCollection property="letterButtons" destination="a2T-9h-21a" collectionClass="NSMutableArray" id="hzQ-xi-azR"/>
-                        <outletCollection property="letterButtons" destination="79y-8d-wlW" collectionClass="NSMutableArray" id="1ge-bx-v5q"/>
-                        <outletCollection property="letterButtons" destination="TRy-10-SKJ" collectionClass="NSMutableArray" id="ROD-Ng-biv"/>
-                        <outletCollection property="letterButtons" destination="l4Z-Bl-Hsn" collectionClass="NSMutableArray" id="MBO-Ym-J67"/>
-                        <outletCollection property="letterButtons" destination="k1D-wo-SZC" collectionClass="NSMutableArray" id="T7X-8c-19J"/>
-                        <outletCollection property="letterButtons" destination="9nf-9y-q3J" collectionClass="NSMutableArray" id="HZH-Wg-fya"/>
-                        <outletCollection property="letterButtons" destination="vvL-rd-xeY" collectionClass="NSMutableArray" id="y92-y0-69H"/>
-                        <outletCollection property="letterButtons" destination="aeG-Tf-In2" collectionClass="NSMutableArray" id="09e-z2-uFq"/>
-                        <outletCollection property="letterButtons" destination="DmW-Ov-ObG" collectionClass="NSMutableArray" id="P30-LC-tf7"/>
-                        <outletCollection property="letterButtons" destination="5w4-ko-gWp" collectionClass="NSMutableArray" id="AQh-vH-xvv"/>
-                        <outletCollection property="letterButtons" destination="P0A-OV-iP2" collectionClass="NSMutableArray" id="O08-hU-Nzg"/>
-                        <outletCollection property="letterButtons" destination="9XW-ZS-3Hv" collectionClass="NSMutableArray" id="45l-Gf-kib"/>
-                        <outletCollection property="letterButtons" destination="nqz-6J-dyl" collectionClass="NSMutableArray" id="PKM-15-bvE"/>
-                        <outletCollection property="letterButtons" destination="WnF-rt-eg3" collectionClass="NSMutableArray" id="E5d-Xx-kJV"/>
-                        <outletCollection property="letterButtons" destination="Cck-g5-dga" collectionClass="NSMutableArray" id="zcV-4y-CLF"/>
-                        <outletCollection property="letterButtons" destination="rAe-4u-ckg" collectionClass="NSMutableArray" id="tpV-5n-MjC"/>
-                        <outletCollection property="letterButtons" destination="WfA-YR-rV1" collectionClass="NSMutableArray" id="mlB-e7-yxh"/>
-                        <outletCollection property="letterButtons" destination="kT9-Qd-rCr" collectionClass="NSMutableArray" id="gC4-mn-VX2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

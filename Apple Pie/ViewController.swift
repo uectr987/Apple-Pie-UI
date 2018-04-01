@@ -33,8 +33,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    @IBOutlet var letterButtons: [UIButton]!
-    
     @IBAction func buttonTapped(_ sender: UIButton) {
         sender.isEnabled = false
         let letterString = sender.title(for: .normal)!
@@ -58,9 +56,19 @@ class ViewController: UIViewController {
         newRound()
     }
     
+    func enableButtons(_ enable: Bool, in view: Any) {
+        if view is UIButton {
+            (view as! UIButton).isEnabled = enable
+        } else if view is UIStackView {
+            for subview in (view as! UIStackView).subviews {
+                enableButtons(enable, in: subview)
+            }
+        }
+    }
+    
     func enableLetterButtons(_ enable: Bool) {
-        for button in letterButtons {
-            button.isEnabled = enable
+        for view in view.subviews {
+            enableButtons(enable, in: view)
         }
     }
     
