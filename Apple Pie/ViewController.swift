@@ -9,10 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var treeImageView: UIImageView!
+    @IBOutlet weak var correctWordLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
-    var listOfWords = names
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        sender.isEnabled = false
+        let letterString = sender.title(for: .normal)!
+        let letter = Character(letterString.lowercased())
+        currentGame.playerGuessed(letter: letter)
+        updateGameState()
+    }
+    
     
     let incorrectMovesAllowed = 7
+    
+    var currentGame: Game!
+    var listOfWords = names
     
     var totalWins = 0 {
         didSet {
@@ -26,49 +39,19 @@ class ViewController: UIViewController {
             newRound(after: 0.5)
         }
     }
-
-    @IBOutlet weak var treeImageView: UIImageView!
-    
-    @IBOutlet weak var correctWordLabel: UILabel!
-    
-    @IBOutlet weak var scoreLabel: UILabel!
-    
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        sender.isEnabled = false
-        let letterString = sender.title(for: .normal)!
-        let letter = Character(letterString.lowercased())
-        currentGame.playerGuessed(letter: letter)
-        updateGameState()
-    }
-    
-    var currentGame: Game!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(arc4random_uniform(0))
-        
-        
-        for i in 0..<listOfWords.count {
-            listOfWords[i] = listOfWords[i].lowercased()
-        }
-        
         newRound()
     }
     
-    func enableButtons(_ enable: Bool, in view: Any) {
+    func enableButtons(_ enable: Bool, in view: UIView) {
         if view is UIButton {
             (view as! UIButton).isEnabled = enable
-        } else if view is UIStackView {
-            for subview in (view as! UIStackView).subviews {
+        } else {
+            for subview in view.subviews {
                 enableButtons(enable, in: subview)
             }
-        }
-    }
-    
-    func enableLetterButtons(_ enable: Bool) {
-        for view in view.subviews {
-            enableButtons(enable, in: view)
         }
     }
     
@@ -77,14 +60,14 @@ class ViewController: UIViewController {
             let randomIndex = Int(arc4random_uniform(UInt32(listOfWords.count)))
             let newWord = listOfWords.remove(at: randomIndex)
             currentGame = Game(
-                word: newWord,
+                word: newWord.lowercased(),
                 incorrectMovesRemaining: incorrectMovesAllowed,
                 guessedLetters: []
             )
-            enableLetterButtons(true)
+            enableButtons(true, in: view)
             updateUI()
         } else {
-            enableLetterButtons(false)
+            enableButtons(false, in: view)
         }
     }
     
